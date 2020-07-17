@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Age Survey</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='../public/css/main.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 p-2">
+                <h1 class="text-center">Male</h1>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nationality</th>
+                            <th>0-30</th>
+                            <th>30-50</th>
+                            <th>50 and above</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{#each dataForMen }}
+                        <tr>
+                            <td>{{@key}}</td>
+                            <td>{{this.under30Age}}</td>
+                            <td>{{this.between30to50Age}}</td>
+                            <td>{{this.above50Age}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-6 p-2">
+                <h1 class="text-center">Female</h1>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nationality</th>
+                            <th>0-30</th>
+                            <th>30-50</th>
+                            <th>50 and above</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{#each dataForFemale }}
+                        <tr>
+                            <td>{{@key}}</td>
+                            <td>{{this.under30Age}}</td>
+                            <td>{{this.between30to50Age}}</td>
+                            <td>{{this.above50Age}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src='../public/js/main.js'></script>
+
+</html>
